@@ -1,0 +1,98 @@
+:root {
+  color-scheme: light;
+  --ink: #512d3b;
+  --muted: #805f6b;
+  --rose: #c64e70;
+  --rose-dark: #a83859;
+  --paper: #fffaf8;
+  --line: #f0d7de;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px 14px;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 15% 15%, #ffe0e8 0, transparent 30%),
+    radial-gradient(circle at 85% 80%, #f9dbe4 0, transparent 28%),
+    #fff3f5;
+  font-family: Georgia, "Times New Roman", serif;
+}
+.poster {
+  width: min(100%, 620px);
+  padding: clamp(24px, 6vw, 54px);
+  text-align: center;
+  background: rgba(255, 250, 248, .96);
+  border: 1px solid #f2d6df;
+  border-radius: 28px;
+  box-shadow: 0 18px 55px rgba(125, 54, 79, .12);
+}
+.eyebrow {
+  font: 600 .72rem/1.4 system-ui, sans-serif;
+  letter-spacing: .2em;
+  color: var(--rose);
+}
+.heart {
+  margin: 18px 0 8px;
+  color: var(--rose);
+  font-size: 3.2rem;
+  animation: pulse 2.3s ease-in-out infinite;
+}
+h1 {
+  margin: 0 auto 18px;
+  font-size: clamp(2rem, 7vw, 3.25rem);
+  font-weight: 500;
+  line-height: 1.13;
+  letter-spacing: -.035em;
+}
+.message {
+  max-width: 420px;
+  margin: 0 auto 28px;
+  color: var(--muted);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+.privacy-card {
+  padding: 22px;
+  text-align: left;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+  font-family: system-ui, sans-serif;
+}
+h2 { margin: 0 0 10px; font-size: 1rem; }
+.privacy-card p {
+  color: #654c56;
+  font-size: .9rem;
+  line-height: 1.6;
+}
+.consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 18px 0;
+  font-size: .9rem;
+  line-height: 1.5;
+}
+.consent input { margin-top: 4px; accent-color: var(--rose); }
+button {
+  width: 100%;
+  padding: 14px 18px;
+  border: 0;
+  border-radius: 999px;
+  color: white;
+  background: var(--rose);
+  font: 650 .95rem system-ui, sans-serif;
+  cursor: pointer;
+  transition: background .2s, transform .2s;
+}
+button:hover { background: var(--rose-dark); }
+button:active { transform: scale(.99); }
+button:disabled { opacity: .55; cursor: wait; }
+.status { min-height: 1.5em; margin-bottom: 0; }
+footer { margin-top: 24px; color: #9a7582; font: .85rem system-ui, sans-serif; }
+@keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.07); } }
+@media (prefers-reduced-motion: reduce) { .heart { animation: none; } }

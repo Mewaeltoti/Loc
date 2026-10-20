@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff3f5">
+  <title>A Little Note for You</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="poster">
+    <div class="eyebrow">A LITTLE SOMETHING FOR YOU</div>
+    <div class="heart" aria-hidden="true">♥</div>
+    <h1>Some people make<br>ordinary days feel special.</h1>
+    <p class="message">
+      Here’s a small moment of sweetness, made just for you.
+      May it bring a little warmth to your day.
+    </p>
+
+    <section class="privacy-card" aria-labelledby="privacy-title">
+      <h2 id="privacy-title">A note about location sharing</h2>
+      <p>
+        If you choose to continue, this page will ask your browser for your
+        current GPS location. If you allow it, your latitude, longitude,
+        estimated accuracy, and submission time will be saved to the website
+        owner’s Supabase database. Your location is not collected if you decline.
+      </p>
+      <label class="consent">
+        <input id="consent" type="checkbox">
+        <span>I understand and agree to share my current location with the website owner.</span>
+      </label>
+      <button id="share" type="button">Agree &amp; share my location</button>
+      <p id="status" class="status" role="status" aria-live="polite">
+        Your choice is yours. You can leave this page without sharing.
+      </p>
+    </section>
+    <footer>Made with care <span aria-hidden="true">♡</span></footer>
+  </main>
+
+  <!-- Load Supabase from its official CDN. See README for configuration. -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
